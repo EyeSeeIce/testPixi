@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>andre fullStack</title>
+    <link rel="icon" href="image/favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+      integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni"
+      crossorigin="anonymous"
+    />
+    <script>
+      function changeColor(newColor) {
+        var elem = document.getElementById("para");
+        elem.style.color = newColor;
+      }
+      // get modal element
+      var modal = document.getElementById("introModal");
+
+      // get open modal
+      var introBtn = document.getElementById("introModalBtn");
+      console.log(introBtn);
+      console.log(modal);
+
+      // get close button
+      var closeBtn = document.getElementsByClassName("modal-close")[0];
+
+      // listen for open click
+      introBtn.addEventListener("click", openModal);
+
+      // listen for close click
+      introBtn.addEventListener("click", closeModal);
+
+      // function to open modal
+      function openModal() {
+        modal.style.display = "block";
+        console.log("123");
+      }
+
+      // function to close modal
+      function closeModal() {
+        modal.style.display = "none";
+        console.log("end");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="filter-shade">
+        <div class="small-container">
+          <div class="circle">
+            <span class="aw-span"><h1>aw</h1> </span>
+          </div>
+          <div class="line-under-circle"></div>
+          <div class="downline-top"></div>
+          <!-- <div class="acrossline-top"></div> -->
+          <div class="inner-paragraph">
+            <h1>Andre Wilkinson</h1>
+            <p>
+              Fullstack trained frontend dev just enjoing learning everyday,
+              embracing the chaos
+            </p>
+          </div>
+          <!-- <div class="accrossline-bottom"></div> -->
+          <div class="downline-bottom"></div>
+          <div class="list-work">
+            <ul class="horizontal-list">
+              <li>
+                <!-- <button class="modal-button"> -->
+                <p id="para">Some text here</p>
+                <button onclick="changeColor('blue');">blue</button>
+                <button id="introModalBtn" class="intro">
+                  INTRO
+                </button>
+
+                <!-- </intro button> -->
+                <!--    id="id01"-->
+                <div id="introModal" class="modal-bg">
+                  <div class="intro-section">
+                    <span class="modal-close">&times;</span>
+
+                    <h1>Intro</h1>
+                    <img src="" alt="intro image" />
+                    <p>
+                      Hi im Andre front end dev just making things and getting
+                      better.
+                    </p>
+                    <!-- <div class="modal">
+                                        <p>Hi im Andre </p>
+                                    </div> -->
+                  </div>
+                </div>
+              </li>
+              <li>
+                <!-- <a class="work" id="work" href="#/work">work</a> -->
+                <button id="workModal" class="work">
+                  WORK
+                </button>
+
+                <!-- work button -->
+
+                <div id="workModal" class="modal-bg-work">
+                  <div class="modal-work-section">
+                    <span class="modal-close">&times;</span>
+
+                    <h1>Work</h1>
+                    <img src="" alt="" />
+                    <p>Hi this is the work modal.</p>
+
+                    <p>Hi im Andre</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <!-- <a class="about" id="about" href="#/about">about</a> -->
+                <button
+                  onclick="document.getElementById('aboutModal').style.display='block'"
+                  class="about"
+                >
+                  ABOUT
+                </button>
+
+                <!-- about button -->
+
+                <div id="aboutModal" class="modal-bg-about">
+                  <div class="modal-about-section">
+                    <span class="modal-close">&times;</span>
+
+                    <h1>About</h1>
+                    <img src="" alt="" />
+                    <p>this is the about modal about was clicked.</p>
+
+                    <p>Hi im Andre</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <!-- <a class="contact"  id="contact"href="#/contact">contact</a> -->
+                <button class="contact">
+                  CONTACT
+                </button>
+
+                <!-- contact button -->
+
+                <div id="contactModal" class="modal-bg-contact">
+                  <div class="modal-contact-section">
+                    <span class="modal-close">&times;</span>
+
+                    <h1>Work</h1>
+                    <img src="" alt="" />
+                    <p>Hi this is the contact modal.</p>
+
+                    <p>Hi im Andre you can contact me @</p>
+                    <a href="https://www.linkedin.com/in/andre-wilkinson/"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                    <a href="https://www.youtube.com/watch?v=6Us5s49NBwY"
+                      ><i class="fa fa-youtube"></i
+                    ></a>
+                    <a href="https://www.ninebyfour.tech/"
+                      ><i class="fa fa-laptop"></i
+                    ></a>
+                    <a href="https://github.com/dredamonsta1"
+                      ><i class="fa fa-github"></i
+                    ></a>
+                    <a href="https://twitter.com/dredamonsta1"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <footer class="footer">
+            © 2021 Andre Wilkinson
+            <a href="https://www.linkedin.com/in/andre-wilkinson/"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+            <a href="https://www.youtube.com/watch?v=6Us5s49NBwY"
+              ><i class="fa fa-youtube"></i
+            ></a>
+            <a href="https://www.ninebyfour.tech/"
+              ><i class="fa fa-laptop"></i
+            ></a>
+            <a href="https://github.com/dredamonsta1"
+              ><i class="fa fa-github"></i
+            ></a>
+            <a href="https://twitter.com/dredamonsta1"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
